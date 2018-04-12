@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: kube-mon
+  labels:
+    app: kube-mon
+spec:
+  containers:
+  - name: kube-mon
+    image: kube-mon:v1
+    command:
+      - sh
+      - -c
+      - "go run ./main.go"

@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: kube-mon
+  labels:
+    app: kube-mon
+spec:
+  ports:
+  - name: service
+    port: 8080
+    protocol: TCP
+  selector:
+    app: kube-mon
+  type: NodePort
